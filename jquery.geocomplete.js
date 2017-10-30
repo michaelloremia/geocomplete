@@ -47,7 +47,8 @@
     detailsScope: null,
     autoselect: true,
     location: false,
-
+    reverse: false, // for reverse geocode searching made easy
+    
     mapOptions: {
       zoom: 14,
       scrollwheel: false,
@@ -349,6 +350,10 @@
 
       if (this.options.country){
         request.region = this.options.country;
+      }
+
+      if (this.options.reverse && request.address.location) {
+        request = {location: request.address.location};
       }
 
       this.geocoder.geocode(request, $.proxy(this.handleGeocode, this));

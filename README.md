@@ -1,3 +1,6 @@
+## Modification
+added reverse options: for passing lat lng directly
+
 # $.geocomplete() - Version 1.7.0
 ## jQuery Geocoding and Places Autocomplete Plugin
 
